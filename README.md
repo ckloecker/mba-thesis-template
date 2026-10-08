@@ -1,3 +1,5 @@
+This project is based on https://github.com/th-nuernberg/thesis-template
+
 # LaTeX Template for Theses and Reports at TH Nürnberg
 
 Basic template for reports, bachelor's theses and master's theses at the [Technische Hochschule Nürnberg Georg Simon Ohm](https://www.th-nuernberg.de/). This version of the template is intended for digital `PDF/A-2b` compliant submissions.
