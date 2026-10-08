@@ -1,0 +1,28 @@
+% !TEX root = ../document.tex
+%----------------------------------------------------------------------
+\chapter{Theoretical Foundations}
+\label{ch:theoretical-foundations}
+%----------------------------------------------------------------------
+
+This model assumes that prices $y_t$ at the forecast origin $t$ stay constant throughout the forecast horizon, i.e., for any time offset $h$:\footnote{This is a footnote with supplemental information.}
+\[
+{\widehat{y}}_{t+h}=y_{t}
+\]
+
+For detailed information on the impact of each data preparation step, refer to table~\ref{tab:data-preparation-summary}.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lcc}
+        \toprule
+        Step & Assets after step & Rows after step \\
+        \midrule
+        Selection & \num{2996} & \num{978923} \\
+        Outlier Cleanup & \num{2994} (-0.07\%) & \num{974601} (-0.44\%) \\
+        Removal of Sparse Histories & \num{2969} (-0.84\%) & \num{974474} (-0.01\%) \\
+        Filling in Missing Data Points & \num{2969} (+0.00\%) & \num{1567945} (+60.88\%) \\
+        Removal of Low-Priced Assets & \num{1971} (-33.61\%) & \num{1046259} (-33.27\%) \\
+        \bottomrule
+    \end{tabular}
+    \caption{Impact of data preparation steps on the dataset.}
+    \label{tab:data-preparation-summary}
+\end{table}

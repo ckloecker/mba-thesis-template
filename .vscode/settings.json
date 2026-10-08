@@ -1,0 +1,42 @@
+{
+    "editor.wordWrap": "on",
+   
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.linting.delay": 250,
+    "latex-workshop.linting.run": "onType",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.recipe.default": "Makefile Build",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "make",
+            "command": "make",
+            "args": ["auto", "DOC_FILE=%DOC%"],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+    {
+        "name": "Makefile Build",
+        "tools": [
+            "make"
+        ]
+    }
+    ],
+    
+    "explorer.excludeGitIgnore": true,
+    
+    "cSpell.enabled": true,
+    "cSpell.language": "en,de-de",
+    "cSpell.minWordLength": 4,
+    "cSpell.ignorePaths": [
+        ".git/{info,lfs,logs,refs,objects}/**",
+        ".git/{index,*refs,*HEAD}",
+        ".vscode",
+        "Makefile",
+        "*.cls",
+        "*.bst"
+    ],
+    "chat.tools.terminal.autoApprove": {
+        "make": true
+    }
+}

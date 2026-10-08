@@ -1,0 +1,117 @@
+%----------------------------------------------------------------------
+% Main document for the thesis template
+%
+% Please read the README.md for instructions on how to use this template.
+%----------------------------------------------------------------------
+\documentclass[
+    apa, % Bibliography style: ieee, wmaainf, apa
+    master, % Type of thesis: master, bachelor, report
+    english, % Language: german, english
+    singlepage % Cover Layout: singlepage, doublepage
+]{mba}
+%----------------------------------------------------------------------
+% Add additional packages
+%----------------------------------------------------------------------
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+\usepackage{todonotes}
+\setuptodonotes{size=\footnotesize}
+
+\usepackage{siunitx}
+\newcommand{\usd}[1]{\mbox{\$\,\num{#1}}}
+
+\usepackage{booktabs}
+
+\usepackage{amssymb}
+
+\usepackage{tabularx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\usepackage{tikz}
+
+%----------------------------------------------------------------------
+% Meta data section
+%----------------------------------------------------------------------
+\title{Very Fancy Title}
+\author{John X.Y. Doe}
+\studentid{\texttt{abc123def}}
+\date{\today}
+%----------------------------------------------------------------------
+\examiner{Prof.\,Dr.\,Jane Doe}
+%----------------------------------------------------------------------
+% \subject{Artificial Intelligence and Specific Processor Architecture: TPUs, GPUs} % Optional for reports
+%----------------------------------------------------------------------
+% \company{Example AG} % Optional
+% \supervisor{Dr.\,rer.\,nat.\,Muster Betreuerin} % Optional, multiple supported
+%----------------------------------------------------------------------
+%\keyword{Container Image}
+%\keyword{Software Supply Chain Security}
+%----------------------------------------------------------------------
+%\repository{https://git.informatik.fh-nuernberg.de/maxmu123/thesis} % Optional
+%----------------------------------------------------------------------
+\begin{abstract}
+\emph{
+The abstract should provide a concise, self-contained summary of the thesis, ideally not
+exceeding 200 words.
+It should state the research problem or objective, identify the data and method or other approach used, report the principal findings, and present the main conclusion or implications.
+Emphasize the results, but include enough context for readers to understand their significance.
+Do not introduce claims, citations, or details that are absent from the thesis.
+The abstract should be understandable without consulting the main text and should not merely repeat the conclusion.
+}
+\end{abstract}
+%----------------------------------------------------------------------
+%\begin{acknowledgements} % Optional
+%    \emph{Only if you want to thank someone.}
+%\end{acknowledgements}
+%----------------------------------------------------------------------
+% Import glossary and acronym definitions
+%----------------------------------------------------------------------
+\input{glossary}
+%----------------------------------------------------------------------
+% Begin document
+%----------------------------------------------------------------------
+\begin{document}
+%----------------------------------------------------------------------
+% \frontmatter -- roman page numbers (i, ii, iii, ...)
+%----------------------------------------------------------------------
+\frontmatter
+%----------------------------------------------------------------------
+% Cover pages
+%----------------------------------------------------------------------
+\maketitle
+%----------------------------------------------------------------------
+\makeacknowledgements
+\makeabstract
+\maketableofcontents
+\makeacronyms
+\listoffigures
+\listoftables
+%\listoflistings
+%\makelexicon
+%----------------------------------------------------------------------
+% \mainmatter -- arabic page numbers, restarting at 1
+%----------------------------------------------------------------------
+\mainmatter
+%----------------------------------------------------------------------
+\include{content/1_introduction}
+\include{content/2_theoretical-foundations}
+\include{content/3_methodology}
+\include{content/4_experiments}
+\include{content/5_outlook}
+\include{content/6_summary}
+%----------------------------------------------------------------------
+% \backmatter
+%----------------------------------------------------------------------
+\backmatter
+%----------------------------------------------------------------------
+% \appendix
+%----------------------------------------------------------------------
+\appendix
+\include{content/a1_supplemental}
+\makebibliography
+\include{content/declaration}
+\end{document}

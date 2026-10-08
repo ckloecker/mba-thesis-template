@@ -1,0 +1,55 @@
+%----------------------------------------------------------------------
+% Expose for the MBA thesis
+%----------------------------------------------------------------------
+\documentclass{expose}
+\usepackage{lipsum}
+
+\title{Your Fancy Title}
+\author{John X.Y. Doe}
+\studentid{abc123def}
+\examiner{Prof.\,Dr.\,Jane Doe}
+\program{MBA in Digital Business \& AI}
+\institution{WiSo Executive School\\Friedrich-Alexander University Erlangen-Nuremberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{multicols}{2}
+\section{Background and Problem Definition}
+
+\textcite{Fama1970} has shown that \ldots.
+This is mostly conclusive with other comparative studies \ldots \parencite{Heck2026}.
+
+\section{Research Question and Objectives}
+
+The central research question is:
+\emph{Can we do it?}
+
+The analysis addresses three supporting questions:
+\begin{enumerate}
+    \item Can we do it efficiently?
+    \item Can we do it fast?
+    \item How much will it cost?
+\end{enumerate}
+
+\lipsum
+
+\section{Proposed Approach}
+
+\lipsum
+
+\section{Provisional Thesis Structure}
+
+\begin{enumerate}
+    \item Introduction and research questions
+    \item Theoretical background
+    \item Data preparation, targets, models, and evaluation design
+    \item Out-of-sample forecast and portfolio results
+    \item Discussion, limitations, and conclusion
+\end{enumerate}
+
+\end{multicols}
+\clearpage
+\makebibliography
+\end{document}
